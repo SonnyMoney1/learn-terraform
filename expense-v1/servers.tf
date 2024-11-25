@@ -5,6 +5,7 @@ resource "aws_instance" "frontend" {
   tags = {
     Name = "frontend"
   }
+}
   resource "aws_instance" "backend" {
     ami           = "ami-09c813fb71547fc4f"
     instance_type = "t3.micro"
@@ -13,7 +14,7 @@ resource "aws_instance" "frontend" {
       Name = "backend"
     }
   }
-  }resource "aws_instance" "mysql" {
+  resource "aws_instance" "mysql" {
     ami           = "ami-09c813fb71547fc4f"
     instance_type = "t3.micro"
 
