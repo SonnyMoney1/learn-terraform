@@ -21,6 +21,6 @@ output "I" {
 }
 
 # second value in list
-output "I2" {
+output "12" {
   value = var.1[1]
 }
