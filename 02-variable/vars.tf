@@ -20,7 +20,6 @@ output "I" {
   value = "var.1"
 }
 
-
 # second value in list
 output "I2" {
   value = var.1[1]
