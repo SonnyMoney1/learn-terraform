@@ -17,10 +17,11 @@ variable "I" {
 }
 
 output "I" {
-  value = "var.I"
+  value = "var.1"
 }
+
 
 # second value in list
 output "I2" {
-  value = var.I[I]
+  value = var.1[1]
 }
