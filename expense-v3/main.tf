@@ -28,9 +28,3 @@ variable "components" {
 
 
 
-    }
-
-  }
-
-  }
-   { name = each.key }
