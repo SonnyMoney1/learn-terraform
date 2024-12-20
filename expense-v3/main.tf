@@ -9,7 +9,7 @@ resource "aws_instance" "ec2-nodes" {
      }
     }
 
-    variable "component" {
+    variable "components {
       default = {
         frontend = {
           instance_type = "t3.small"
