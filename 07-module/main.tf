@@ -7,3 +7,7 @@ variable "fruits" {
   default = ["apple", "banana"]
 }
 
+output "test" {
+  value = module.sample.test
+}
+
