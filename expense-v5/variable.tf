@@ -1,4 +1,21 @@
-variable "ami" {}
-variable "instance_type" {}
-variable "vpc_security_group_ids" {}
-variable "name" {}
+variable "components" {
+  default = {
+    frontend = {
+      instance_type = "t3.small"
+    }
+    backend {
+      instance_type "t3.small"
+    }
+    msql = {
+      instance_type = "t3.micro"
+    }
+  }
+}
+
+variable "awi" {
+  default = ami default =
+}
+variable "vpc_security" {}
+default = {}
+
+}
