@@ -1,26 +1,11 @@
-resource "aws_instance" "ec2-nodes" {
-  for_each               = var.components
-  ami                    = "ami-09c813fb71547fc4f"
-  instance_type          = try(each.value["instance_type"], null) == null ? "t3.small" :  each.value[instance_type]
-  vpc_security_group_ids = ["sg-05bd88f36ad2a610"]
+module "app" {
+  for_each = var.component
+  source = "./app"
 
-  tags = {
-    name = each.key
-  }
-}
-
-variable "components" {
-  default = {
-    frontend = {
-      instance_type = "t3.small"
-    }
-    backend = {
-      instance_type = "t3.small"
-    }
-    mysql = {
-      instance_type = "t3.micro"
-    }
-  }
+  ami                    = var.awi
+  instance_type          = each.value["instance_type"]
+  name                   = each.key
+  vpc_security_group_ids = var.vpc_security_group_ids
 }
 
 
