@@ -1,6 +1,6 @@
 resource "aws_instance" "node" {
-  ami      = var.ami
-  instance_type = "var.instance_type"
+  ami                    = var.ami
+  instance_type          = "var.instance_type"
   vpc_security_group_ids = var.vpc_security_group_ids
 
   tags = {
@@ -8,12 +8,6 @@ resource "aws_instance" "node" {
   }
 }
 
-resource "aws_route53_record" "record" {
-  zone_id = "var.zone"
-  name    = "${var.name}-dev.rdvops79.online"
-  type    = "A"
-  ttl     = 30
-  records = [aws_eip.public_ip]
-}
+
 
 
