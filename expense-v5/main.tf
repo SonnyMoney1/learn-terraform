@@ -1,4 +1,4 @@
-resource "app"  {
+module "app"  {
   for_each = var.components
   source = "./app"
   ami                    = var.ami
