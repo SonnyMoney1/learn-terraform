@@ -13,7 +13,7 @@ variable "component" {
 }
 
 variable "awi" {
-  default = ami default = "ami-09c813fb71547fc4f"
+  default = "ami-09c813fb71547fc4f"
 }
 variable "vpc_security_group_ids" {
 default =  ["sg-05bd88f36ad2a6107"]
