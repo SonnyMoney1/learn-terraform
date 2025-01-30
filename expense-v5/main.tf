@@ -1,5 +1,5 @@
 module "app" {
-  for_each = var.component
+  for_each = var.components
   source = "./app"
 
   ami                    = var.ami
